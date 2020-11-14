@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="/css/app.css">
 
+    <script src="/js/api.js"></script>
+
     <title>Expiral - Home</title>
 
   </head>
