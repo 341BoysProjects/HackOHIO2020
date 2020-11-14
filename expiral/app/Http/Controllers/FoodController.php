@@ -47,24 +47,24 @@ class FoodController extends Controller
         $food = Food::find($food_id);
 
         $food_name = $request->food_name;
-        if ($food_name != "" && isset($food_name) && $food_name != null)) {
+        if ($food_name != "" && isset($food_name) && $food_name != null) {
             $food->food_name = $food_name;
         }
         
 
         $food_upc = $request->food_upc;
-        if ($food_upc != "" && isset($food_upc) && $food_upc != null)) {
+        if ($food_upc != "" && isset($food_upc) && $food_upc != null) {
             $food->food_upc = $food_upc;
         }
         
 
         $expiration_date = $request->expiration_date;
-        if ($expiration_date != "" && isset($expiration_date) && $expiration_date != null)) {
+        if ($expiration_date != "" && isset($expiration_date) && $expiration_date != null) {
             $food->expiration_date = $expiration_date;
         }
 
         $is_expired = $request->is_expired;
-        if ($is_expired != "" && isset($is_expired) && $is_expired != null)) {
+        if ($is_expired != "" && isset($is_expired) && $is_expired != null) {
             $food->is_expired = $is_expired;
         }
 
