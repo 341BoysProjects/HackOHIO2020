@@ -27,7 +27,11 @@ class FoodController extends Controller
 
     public function removeFood(Request $request) {
         $id = Auth::id();
+        $food_id = $request->food_id;
 
+        $deletedRows = App\Models\Food::where('user_id', $id)
+                ->where('id', $food_id)    
+                ->delete();
 
         return response()->json(['message' => 'Food removed successfully!'], 200);
     }
