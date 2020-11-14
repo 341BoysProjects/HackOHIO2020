@@ -8,8 +8,13 @@ use GuzzleHttp\Client;
 
 class KrogerController extends Controller
 {
-    $this->clientID = 'evanhorsley-3a6f1b6bcc379ba5ee627eb540f163b82747517118654733878';
-    $this->krogerOauth = 'https://api.kroger.com/v1/connect/oauth2/authorize';
+    
+
+    public function __construct()
+    {
+        $this->clientID = 'evanhorsley-3a6f1b6bcc379ba5ee627eb540f163b82747517118654733878';
+        $this->krogerOauth = 'https://api.kroger.com/v1/connect/oauth2/authorize';
+    }
 
     public function loginKroger(Request $request) {
         //Parameters:
