@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 //Controllers
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FoodController;
 
 /*
 |--------------------------------------------------------------------------
