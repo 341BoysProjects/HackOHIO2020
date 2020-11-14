@@ -24,7 +24,7 @@ class KrogerController extends Controller
             'timeout'  => 10.0,
         ]);
 
-        $response = $client->request('GET', $this->krogerOuath, [
+        $response = $client->request('GET', $this->krogerOauth, [
             'query' => ['scope' => 'profile.compact',
                         'client_id' => $this->clientID,
                         'redirect_uri' => 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard',
