@@ -44,7 +44,7 @@ Route::middleware('auth:api')->group(function () {
     //Kroger Routes
     Route::get('/kroger/sign-in', function() {
         $clientID = 'evanhorsley-3a6f1b6bcc379ba5ee627eb540f163b82747517118654733878';
-        return redirect('https://api.kroger.com/v1/connect/oauth2/authorize?scope=profile.compact&client_id=' . $clientID . '&response_type=code&redirectUri=http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard');
+        return redirect('https://api.kroger.com/v1/connect/oauth2/authorize?scope=profile.compact&client_id=' . $clientID . '&response_type=code&redirect_uri=http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard');
     });
 
     //User routes
