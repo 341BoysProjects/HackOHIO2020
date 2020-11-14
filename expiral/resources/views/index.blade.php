@@ -45,7 +45,7 @@
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary" id="sign-in-button">Sign in</button>
+                <button type="submit" class="btn btn-primary sign-in-button">Sign in</button>
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/sign-up">New to Expiral? Sign up</a>
