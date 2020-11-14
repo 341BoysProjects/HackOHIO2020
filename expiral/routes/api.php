@@ -42,7 +42,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/get-food', 'App\Http\Controllers\FoodController@getFood');
 
     //Kroger Routes
-    Roue::get('/kroger/process-sign-in', 'App\Http\Controllers\KrogerController@processSignIn');
+    Route::get('/kroger/process-sign-in', 'App\Http\Controllers\KrogerController@processSignIn');
 
 
         //$clientID = 'evanhorsley-3a6f1b6bcc379ba5ee627eb540f163b82747517118654733878';
