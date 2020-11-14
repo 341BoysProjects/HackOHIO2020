@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\KrogerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,9 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/update-food', 'App\Http\Controllers\FoodController@updateFood');
     Route::post('/expire-food', 'App\Http\Controllers\FoodController@expireFood');
     Route::get('/get-food', 'App\Http\Controllers\FoodController@getFood');
+
+    //Kroger Routes
+    Route::post('/kroger/sign-in', 'App\Http\Controllers\KrogerController@loginKroger');
 
     //User routes
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout.api');
