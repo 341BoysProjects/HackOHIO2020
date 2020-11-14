@@ -1,0 +1,14 @@
+#title {
+    padding-bottom: 0.25em;
+}
+
+#signUpBlock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#signUpButton {
+    padding-top: .5em;
+}
