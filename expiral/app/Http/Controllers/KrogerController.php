@@ -17,21 +17,14 @@ class KrogerController extends Controller
     }
 
     public function loginKroger(Request $request) {
-        //Parameters:
-        //scope
-        //client_id
-        //redirect_uri
-        //response_type
-        //state (not req)
-
         $client = new Client([
             // Base URI is used with relative requests
-            'base_uri' => $this->krogerOauth,
+            //'base_uri' => $this->krogerOauth,
             // You can set any number of default request options.
             'timeout'  => 10.0,
         ]);
 
-        $response = $client->request('GET', 'http://httpbin.org', [
+        $response = $client->request('GET', $this->krogerOuath, [
             'query' => ['scope' => 'profile.compact',
                         'client_id' => $this->clientID,
                         'redirect_uri' => 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard',
@@ -40,5 +33,16 @@ class KrogerController extends Controller
         ]);
 
         print_r($response);
+    }
+
+    /**
+     * Process auth code from redirect uri
+     * 
+     * WHen rediecting from kroger sign in, process the code given for that user
+     */
+    public function processAuthCode(Request $request) {
+        $id = Auth::id();
+
+        echo $request->code;
     }
 }
