@@ -1,10 +1,10 @@
 body {
-    background-image: url('../../storage/app/public/Images/download.jpg');
+    background-image: url('../../public/Images/download.jpg');
   }
 
 h1 {
     text-align: center;
-    padding: 50vh 1;
+    padding: 50vh 0;
     font-size: 15vh;
 }
 
@@ -14,7 +14,7 @@ h1 {
   }
   
 #background {
-    background-image: url('../../storage/app/public/Images/download.jpg');
+    background-image: url('../../public/Images/download.jpg');
     position: fixed;
     height: 100 vh;
     width: 100 vw;
