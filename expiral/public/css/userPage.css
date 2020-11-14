@@ -1,0 +1,50 @@
+#bg {
+    background-image: url('../images/charcuterie.jpg');
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#signOut {
+    float: right;
+    padding: 16px 16px;
+  }
+
+#info {
+    
+    padding: 10vh 10vw 0 10vw;
+}
+
+#myFoods {
+
+    width: 80vw;
+    background-color: rgb(135, 206, 235)
+}
+
+#itemTable{
+    opacity: 100%;
+    width: 100%;
+}
+
+#itemTable th {
+    width: 25%;
+    text-align: left;
+}
+
+#itemTable #tableHead {
+    background: lightblue;
+}
+
+#itemTable tr:nth-child(even){
+    background: lightblue
+}
+
+#itemTable tr:nth-child(odd){
+    background: lightskyblue
+}
