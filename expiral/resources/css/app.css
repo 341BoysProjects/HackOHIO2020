@@ -18,7 +18,7 @@ h1 {
   }
   
 #bg {
-    background-image: url('../public/images/giphy.gif');
+    background-image: url('/images/giphy.gif');
     top: 0;
     left: 0;
     position: fixed;
