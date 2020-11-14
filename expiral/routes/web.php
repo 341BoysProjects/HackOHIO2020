@@ -21,23 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    
-    $code = Input::get("code");
-    echo $code;
-
-    //Auth code processing
-    if ($code != null) {
-        echo "I have an auth code";
-        $request = new Request;
-        $request->code = $code;
-        $kroger = new App\Http\Controllers\KrogerController;
-        $kroger->processAuthCode($request);
-    }
-    
-
-
-    return "Dashboard route working";
-
-
-    // return view('dashboard');
+    return view('dashboard');
 });
