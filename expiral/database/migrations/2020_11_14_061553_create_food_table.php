@@ -14,7 +14,11 @@ class CreateFoodTable extends Migration
     public function up()
     {
         Schema::create('food', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('food_name');
+            $table->string('food_upc');
+            $table->date('expiration_date');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
