@@ -15,9 +15,9 @@ class CreateCostBestbyWastedColumns extends Migration
     {
         Schema::table('food', function($table) {
             $table->tinyInteger('past_expired');
-            $table->date('user_best_by_date');
+            $table->date('user_best_by_date')->nullable();
             $table->tinyInteger('wasted_before_expiration');
-            $table->string('cost');
+            $table->string('cost')->nullable();
         });
     }
 
