@@ -20,11 +20,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/dashboard/{code?}', function ($code = null) {
+Route::get('/dashboard', function () {
     
+    $code = Input::get("code");
+    echo $code;
     
     //Auth code processing
     if ($code != null) {
+        echo "I have an auth code"
         $request = new Request;
         $request->code = $code;
         $kroger = new App\Http\Controllers\KrogerController;
