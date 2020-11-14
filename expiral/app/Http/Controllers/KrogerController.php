@@ -39,6 +39,6 @@ class KrogerController extends Controller
                         ]
         ]);
 
-        print_r($response->getBody());
+        print_r($response);
     }
 }
