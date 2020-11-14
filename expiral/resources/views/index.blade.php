@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="../../public/css/app.css">
 
     <title>Expiral - Home</title>
 
@@ -46,7 +46,7 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
               </form>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">New to Expiral? Sign up</a>
+              <a class="dropdown-item" href="/sign-up">New to Expiral? Sign up</a>
               <a class="dropdown-item" href="#">Forgot password?</a>
             </div>
           </div>
