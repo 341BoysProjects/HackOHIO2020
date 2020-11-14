@@ -14,7 +14,7 @@ class AddExpiredColumnToFoodTable extends Migration
     public function up()
     {
         Schema::table('food', function($table) {
-            $table->tinyint('is_expired');
+            $table->tinyInteger('is_expired');
         });
     }
 
