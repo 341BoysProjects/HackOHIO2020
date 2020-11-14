@@ -31,7 +31,7 @@ class KrogerController extends Controller
             'timeout'  => 10.0,
         ]);
 
-        $client->request('GET', 'http://httpbin.org', [
+        $response = $client->request('GET', 'http://httpbin.org', [
             'query' => ['scope' => 'profile.compact',
                         'client_id' => $this->clientID,
                         'redirect_uri' => 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard',
@@ -39,6 +39,6 @@ class KrogerController extends Controller
                         ]
         ]);
 
-        print_r($client);
+        print_r($response->getBody());
     }
 }
