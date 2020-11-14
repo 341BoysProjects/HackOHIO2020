@@ -13,8 +13,11 @@ class CreateCostBestbyWastedColumns extends Migration
      */
     public function up()
     {
-        Schema::table('food', function (Blueprint $table) {
-            //
+        Schema::table('food', function($table) {
+            $table->tinyInteger('past_expired');
+            $table->date('user_best_by_date');
+            $table->tinyInteger('wasted_before_expiration');
+            $table->string('cost');
         });
     }
 
@@ -25,8 +28,11 @@ class CreateCostBestbyWastedColumns extends Migration
      */
     public function down()
     {
-        Schema::table('food', function (Blueprint $table) {
-            //
+        Schema::table('food', function($table) {
+            $table->dropColumn('past_expired');
+            $table->dropColumn('user_best_by_date');
+            $table->dropColumn('wasted_before_expiration');
+            $table->dropColumn('cost');
         });
     }
 }
