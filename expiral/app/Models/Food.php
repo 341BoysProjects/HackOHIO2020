@@ -28,7 +28,11 @@ class Food extends Model
         'food_upc',
         'expiration_date',
         'user_id',
-        'is_expired'
+        'is_expired',
+        'past_expired',
+        'user_best_by_date',
+        'wasted_before_expiration',
+        'cost',
     ];
 
     /**
