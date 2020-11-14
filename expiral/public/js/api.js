@@ -23,8 +23,5 @@ function login(email, password) {
         return response.json();
     });
 
-    // const myJson = await response.json(); //extract JSON from the http response
-    // // do something with myJson
-    // console.log(response);
-    // console.log(myJson);
+    console.log("Im down here");
 }
