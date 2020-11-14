@@ -5,7 +5,6 @@
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
 
 function login(email, password) {
-    console.log("Testing...1");
     const userAction = async () => {
         const response = await fetch(base_url + '/api/login', {
             method: 'POST',
@@ -16,7 +15,7 @@ function login(email, password) {
         });
         const myJson = await response.json(); //extract JSON from the http response
         // do something with myJson
+        console.log(response);
         console.log(myJson);
     }
-    console.log("Testing...2");
 }
