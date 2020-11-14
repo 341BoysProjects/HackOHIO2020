@@ -42,7 +42,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/get-food', 'App\Http\Controllers\FoodController@getFood');
 
     //Kroger Routes
-    Route::post('/kroger/sign-in', 'App\Http\Controllers\KrogerController@loginKroger');
+    Route::get('/kroger/sign-in', 'App\Http\Controllers\KrogerController@loginKroger');
 
     //User routes
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout.api');
