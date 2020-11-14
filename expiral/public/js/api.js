@@ -3,9 +3,11 @@
  */
 
 //Button Listeners
-document.getElementById("sign-in-button").addEventListener("click", function () {
-    login(document.getElementById('userEmail').value, document.getElementById('userPassword').value);
-});
+window.onload = function () {
+    document.getElementById("sign-in-button").addEventListener("click", function () {
+        login(document.getElementById('userEmail').value, document.getElementById('userPassword').value);
+    });
+}
 
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
 
