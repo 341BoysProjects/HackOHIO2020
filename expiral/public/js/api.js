@@ -5,6 +5,8 @@
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
 
 function login(email, password) {
+    console.log(email);
+    console.log(password);
     const userAction = async () => {
         const response = await fetch(base_url + '/api/login', {
             method: 'POST',
