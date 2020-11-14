@@ -13,8 +13,8 @@ class AddExpiredColumnToFoodTable extends Migration
      */
     public function up()
     {
-        Schema::table('food', function (Blueprint $table) {
-            //
+        Schema::table('food', function($table) {
+            $table->tinyint('is_expired');
         });
     }
 
@@ -25,8 +25,8 @@ class AddExpiredColumnToFoodTable extends Migration
      */
     public function down()
     {
-        Schema::table('food', function (Blueprint $table) {
-            //
+        Schema::table('food', function($table) {
+            $table->dropColumn('is_expired');
         });
     }
 }

@@ -23,20 +23,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['cors', 'json.response']], function () {
-
-    // ...
-
     // public routes
     Route::post('/login', 'App\Http\Controllers\AuthController@login')->name('login.api');
     Route::post('/register','App\Http\Controllers\AuthController@register')->name('register.api');
-    
-
-    // ...
-
 });
 
 Route::middleware('auth:api')->group(function () {
     // our routes to be protected will go in here
+    
+    //Food routes
+    Route::post('/add-food', 'App\Http\Controller\FoodController@addFood');
 
+    //User routes
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout.api');
 });
