@@ -33,11 +33,11 @@ Route::middleware('auth:api')->group(function () {
     // our routes to be protected will go in here
     
     //Food routes
-    Route::post('/add-food', 'App\Http\Controller\FoodController@addFood');
-    Route::post('/remove-food', 'App\Http\Controller\FoodController@removeFood');
-    Route::post('/update-food', 'App\Http\Controller\FoodController@updateFood');
-    Route::post('/expire-food', 'App\Http\Controller\FoodController@expireFood');
-    Route::get('/get-food', 'App\Http\Controller\FoodController@getFood');
+    Route::post('/add-food', 'App\Http\Controllers\FoodController@addFood');
+    Route::post('/remove-food', 'App\Http\Controllers\FoodController@removeFood');
+    Route::post('/update-food', 'App\Http\Controllers\FoodController@updateFood');
+    Route::post('/expire-food', 'App\Http\Controllers\FoodController@expireFood');
+    Route::get('/get-food', 'App\Http\Controllers\FoodController@getFood');
 
     //User routes
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout.api');
