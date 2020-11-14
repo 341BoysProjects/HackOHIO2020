@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Food;
 
 class FoodController extends Controller
 {
@@ -21,5 +22,15 @@ class FoodController extends Controller
 
     public function expireFood(Request $request) {
 
+    }
+
+    public function getFood(Request $request) {
+        $id = Auth::id();
+        echo $id;
+
+        $food = Food::where('user_id', $id)
+               ->orderBy('expiration_date', 'desc')
+               ->take(10)
+               ->get();
     }
 }
