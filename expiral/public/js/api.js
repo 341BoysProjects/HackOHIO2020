@@ -2,6 +2,10 @@
  * JavaScript API Interface to Interact with Backend API
  */
 
+//Button Listeners
+var submitBtn = document.querySelector('sign-in-button');
+submitBtn.addEventListener('click', login(document.getElementById('userEmail').value, document.getElementById('userPassword').value));
+
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
 
 function login(email, password) {
@@ -12,7 +16,7 @@ function login(email, password) {
             'Content-Type': 'application/json'
         }
     }).then(function (response) {
-        console.log(response.json());
+        const resp = response;
         return response.json();
     });
 
