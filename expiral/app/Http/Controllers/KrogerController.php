@@ -32,6 +32,9 @@ class KrogerController extends Controller
                         ]
         ]);
 
+        $authUrl = $this->krogerOauth . '?scope=profile.compact&client_id=' . $this->clientID . '&redirectUri=http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard&response_type=code';
+
+
         print_r($response);
     }
 

@@ -42,7 +42,10 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/get-food', 'App\Http\Controllers\FoodController@getFood');
 
     //Kroger Routes
-    Route::get('/kroger/sign-in', 'App\Http\Controllers\KrogerController@loginKroger');
+    Route::get('/kroger/sign-in', function() {
+        $clientID = 'evanhorsley-3a6f1b6bcc379ba5ee627eb540f163b82747517118654733878';
+        return redirect('https://api.kroger.com/v1/connect/oauth2/authorize?scope=profile.compact&client_id=' . $clientID . '&redirectUri=http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com/dashboard&response_type=code');
+    });
 
     //User routes
     Route::post('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout.api');
