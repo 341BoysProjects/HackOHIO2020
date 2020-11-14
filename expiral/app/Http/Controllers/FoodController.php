@@ -130,7 +130,16 @@ class FoodController extends Controller
      * on when a food actually will expire
      */
     public function markPastExpired(Request $request) {
+        $id = Auth::id();
+        $food_id = $request->food_id;
 
+        $food = Food::find($food_id);
+
+        $food->past_expired_date = 1;
+
+        $food->save();
+
+        return response()->json(['message' => 'Food marked past expired successfully!'], 200);
     }
 
     /**
@@ -141,7 +150,16 @@ class FoodController extends Controller
      * that there is an actual "best by" date that we can add here
      */
     public function addUserBestByDate(Request $request) {
-        
+        $id = Auth::id();
+        $food_id = $request->food_id;
+
+        $food = Food::find($food_id);
+
+        $food->user_best_by_date = $request->user_best_by_date;
+
+        $food->save();
+
+        return response()->json(['message' => 'Food user best by date added successfully!'], 200);
     }
 
     /**
@@ -152,7 +170,16 @@ class FoodController extends Controller
      * keep track of how much food they waste and how much money they lose doing it
      */
     public function markWastedBeforeExpiration(Request $request) {
+        $id = Auth::id();
+        $food_id = $request->food_id;
 
+        $food = Food::find($food_id);
+
+        $food->wasted_before_expiration = 1;
+
+        $food->save();
+
+        return response()->json(['message' => 'Food marked wasted before expiration successfully!'], 200);
     }
 
     //TODO: Add in ability for user to keep track of what portion of a food they wasted, instead of the whole
