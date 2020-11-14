@@ -3,7 +3,7 @@
  */
 
 //Button Listeners
-var submitBtn = document.querySelector('sign-in-button');
+var submitBtn = document.getElementById('sign-in-button');
 submitBtn.addEventListener('click', login(document.getElementById('userEmail').value, document.getElementById('userPassword').value));
 
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
