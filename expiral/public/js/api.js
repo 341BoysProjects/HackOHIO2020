@@ -7,7 +7,8 @@ window.onload = function () {
     document.getElementById("sign-in-button").addEventListener("click", function () {
         var email = document.getElementById('userEmail').value;
         var password = document.getElementById('userPassword').value;
-        var token = document.getElementById('csrftoken').value;
+        var token = $("input[name='_token']").val();
+        console.log(token);
 
         login(email, password, token);
     });
@@ -24,6 +25,7 @@ function login(email, password, token) {
             "X-Requested-With": "XMLHttpRequest",
             "X-CSRF-Token": token,
         },
+        credentials: "same-origin",
         body: bodyData
     })
     .then(response => console.log(response))

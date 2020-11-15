@@ -28,7 +28,7 @@
               Sign In
             </button>
             <div class="dropdown-menu dropdown-menu-right">
-              <form class="px-4 py-3">
+              <form class="px-4 py-3" method="post">
                 <div class="form-group">
                   <label for="userEmail">Email address</label>
                   <input type="email" class="form-control" id="userEmail" placeholder="user@expiral.com">
