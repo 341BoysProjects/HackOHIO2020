@@ -1,5 +1,5 @@
 #bg {
-    background-image: url('../images/charcuterie.jpg');
+    background-image: url(../images/charcuterie.jpg);
     top: 0;
     left: 0;
     position: fixed;
@@ -22,23 +22,24 @@
 }
 
 #myFoods {
-
+    background-color: rgba(0,0,0,.5);
     width: 80vw;
-    background-color: rgb(135, 206, 235)
+    padding: 1em;
 }
 
 #itemTable{
-    opacity: 100%;
     width: 100%;
 }
 
 #itemTable th {
     width: 25%;
     text-align: left;
+
 }
 
-#itemTable #tableHead {
+#tableHead {
     background: lightblue;
+    border-radius: 10px;
 }
 
 #itemTable tr:nth-child(even){
@@ -47,4 +48,11 @@
 
 #itemTable tr:nth-child(odd){
     background: lightskyblue
+}
+
+#yourItems {
+    padding-inline-start: 10px;
+    font-size: 10vh;
+    background-color: lightskyblue;
+    border-radius: 10px;
 }
