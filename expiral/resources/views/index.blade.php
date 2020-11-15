@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <button type="submit" class="btn btn-primary" id="sign-in-button">Sign in</button>
-                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                {{ csrf_field() }}
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/sign-up">New to Expiral? Sign up</a>
