@@ -15,13 +15,13 @@ window.onload = function () {
 const base_url = 'http://ec2-18-188-72-25.us-east-2.compute.amazonaws.com';
 
 function login(email, password) {
+    var bodyData = 'email=' + email + '&password=' + password + '&password_confirmation=' + password;
     fetch(base_url + '/api/login', {
         method: 'POST',
-        body: 'email=' + email + '&password=' + password + '&password_confirmation=' + password, // string or object
         headers: {
             'Content-Type': 'application/x-www-form-url-encoded',
-            'Accept': 'application/json'
-        }
+        },
+        body: bodyData
     })
     .then(response => console.log(response))
     .catch(error => console.log(error));
