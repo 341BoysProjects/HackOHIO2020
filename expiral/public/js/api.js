@@ -22,9 +22,9 @@ function login(email, password) {
             'Content-Type': 'application/x-www-form-url-encoded',
             'Accept': 'application/json'
         }
-    }).then(function (response) {
-        return response.json();
-    });
+    })
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
 
     console.log("Im down here");
 }
