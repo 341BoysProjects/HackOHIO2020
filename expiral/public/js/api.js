@@ -7,10 +7,10 @@ window.onload = function () {
     document.getElementById("sign-in-button").addEventListener("click", function () {
         var email = document.getElementById('userEmail').value;
         var password = document.getElementById('userPassword').value;
-        var token = $("input[name='_token']").val();
-        console.log(token);
+        var csrf = document.querySelector('meta[name="csrf-token"]').content;
+        console.log(csrf);
 
-        login(email, password, token);
+        login(email, password, csrf);
     });
 }
 

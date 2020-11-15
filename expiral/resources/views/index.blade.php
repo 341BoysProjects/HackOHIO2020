@@ -14,6 +14,8 @@
 
     <title>Expiral - Home</title>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
   </head>
 
 
@@ -46,7 +48,6 @@
                   </div>
                 </div>
                 <button type="submit" class="btn btn-primary" id="sign-in-button">Sign in</button>
-                {{ csrf_field() }}
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/sign-up">New to Expiral? Sign up</a>
