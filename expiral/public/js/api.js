@@ -5,7 +5,11 @@
 //Button Listeners
 window.onload = function () {
     document.getElementById("sign-in-button").addEventListener("click", function () {
-        login(document.getElementById('userEmail').value, document.getElementById('userPassword').value);
+        var email = document.getElementById('userEmail').value;
+        var password = document.getElementById('userPassword').value;
+        console.log(email);
+        console.log(password);
+        login(email, password);
     });
 }
 
@@ -19,7 +23,6 @@ function login(email, password) {
             'Content-Type': 'application/json'
         }
     }).then(function (response) {
-        const resp = response;
         return response.json();
     });
 
