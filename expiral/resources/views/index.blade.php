@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../../public/css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <script src="/js/api.js"></script>
 
     <title>Expiral - Home</title>
 
@@ -43,7 +45,8 @@
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary" id="sign-in-button">Sign in</button>
+                {{ csrf_field() }}
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/sign-up">New to Expiral? Sign up</a>
